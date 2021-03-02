@@ -6,9 +6,9 @@ var objt = {} // tipo Object
 var func = () => {} // tipo variável função(functiom)
 
 
-console.log(typeof str)
-console.log(typeof numb)
-console.log(typeof isBoolean)
-console.log(typeof matrix)
-console.log(typeof objt)
-console.log(typeof func)
+console.log({valor: str, tipo:  typeof str})
+console.log({valor: numb, tipo:  typeof numb})
+console.log({valor: isBoolean, tipo:  typeof isBoolean})
+console.log({valor: matrix, tipo:  typeof matrix})
+console.log({valor: objt, tipo:  typeof objt})
+console.log({valor: func, tipo:  typeof func})
