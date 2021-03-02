@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "variaveis": "node Js/variaveis.js",
+    "operadores": "node Js/operadores.js",
+    "condicionais": "node Js/condicionais.js"
   },
   "repository": {
     "type": "git",
