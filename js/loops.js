@@ -7,7 +7,7 @@ var Pessoa = [
     pais: "Pernambuco",
   },
   {
-    nome: "Maria",
+    nome: "",
     idade: 20,
     altura: 1.5,
     cidade: "São Bernardo",
@@ -24,10 +24,14 @@ var Pessoa = [
 
 // for
 
-const manipulandoIdade = () => {
+const VerificandoIdade = () => {
   for (let i = 0; i < Pessoa.length; i++) {
     const idades = Pessoa[i];
-    idades.idade <= 18 ? (idades.DeMenor = "Sim") : (idades.DeMenor = "Não");
+    if (idades.idade <= 18) {
+      idades.DeMaior = "não";
+    } else {
+      idades.DeMaior = "Sim";
+    }
   }
 };
 
@@ -37,7 +41,12 @@ const VerificandoAltura = () => {
   let i = 0;
   while (i < Pessoa.length) {
     const altura = Pessoa[i];
-    altura.altura >= 1.6 ? (altura.Alto = "Sim") : (altura.Alto = "Não");
+
+    if (altura.altura >= 1.6) {
+      altura.Alto = "Sim";
+    } else {
+      altura.Alto = "Não";
+    }
     i++;
   }
 };
@@ -48,9 +57,13 @@ const VerificandoPais = () => {
   let i = 0;
   do {
     const pais = Pessoa[i];
-    pais.pais === "Pernambuco"
-      ? (pais.MoraEmPe = "Sim")
-      : (pais.MoraEmPe = "Não");
+
+    if (pais.pais === "Pernambuco") {
+      pais.MoraEmPe = "Sim";
+    } else {
+      pais.MoraEmPe = "Não";
+    }
+
     i++;
   } while (i < Pessoa.length);
 };
@@ -64,8 +77,23 @@ const VerificandoPais = () => {
 
 const VerificandoNome = () => {
   for (const nome of Pessoa) {
-    const valor = nome.nome;
-    !valor ? (nome.NomeExist = "sim") : (nome.NomeExist = "não");
+    const nomeExiste = nome.nome;
+    if (nomeExiste) {
+      nome.NomeExist = "Sim";
+    } else {
+      nome.NomeExist = "Não";
+    }
+  }
+};
+
+const verificaCidade = () => {
+  for (const Cidade of Pessoa) {
+    const Cid = Cidade.cidade;
+    if (Cid !== 'Recife') {
+      Cidade.MoraEmRecife = "Não";
+    } else {
+      Cidade.MoraEmRecife = "Sim";
+    }
   }
 };
 
@@ -73,10 +101,11 @@ const VerificandoNome = () => {
 
 console.log(Pessoa);
 
-manipulandoIdade();  
-VerificandoAltura(); 
-VerificandoPais(); 
-VerificandoNome(); 
+VerificandoIdade();
+VerificandoAltura();
+VerificandoPais();
+VerificandoNome();
+verificaCidade();
 
 // após manipulação
 
