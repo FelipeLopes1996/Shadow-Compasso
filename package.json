@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "variaveis": "node Js/variaveis.js",
     "operadores": "node Js/operadores.js",
-    "condicionais": "node Js/condicionais.js"
+    "condicionais": "node Js/condicionais.js",
+    "loops": "node Js/loops.js"
   },
   "repository": {
     "type": "git",
