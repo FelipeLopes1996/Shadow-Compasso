@@ -7,43 +7,46 @@ var Pessoa = {
 };
 // console.log(Pessoa)
 
+// verificando se Pessoa.nome existe.
 const verificaNome = () => {
-  let mudaAdcNome = !Pessoa.nome
-    ? (Pessoa.existeONome = true)
-    : (Pessoa.NaoexisteONome = false);
-  return mudaAdcNome;
+  if(Pessoa.nome) {
+    Pessoa.ExisteNome = 'sim'
+  } else {
+    Pessoa.ExisteNome = 'Não'
+  }
 };
 
 const verificaIdade = () => {
-  let Midade =
-    Pessoa.idade >= 18
-      ? (Pessoa.eDeMaiorIdade = true)
-      : (Pessoa.NaoEDeMaiorIdade = false);
-  return Midade;
+  if(Pessoa.idade >= 18) {
+    Pessoa.DeMaior = 'sim'
+  } else {
+    Pessoa.DeMaior = 'Não'
+  }
 };
 
 const verificaCidade = () => {
-  let cidade =
-    Pessoa.cidade === "Olinda"
-      ? (Pessoa.NaoMoraEmRecife = true)
-      : (Pessoa.moraRecife = false);
-  return cidade;
+  if(Pessoa.cidade === "Recife") {
+    Pessoa.MoraEmRecife = 'sim'
+  } else {
+    Pessoa.MoraEmRecife = 'Não'
+  }
 };
 
+// negativa
 const verificaPais = () => {
-  let Pais =
-    Pessoa.Pais !== "Olinda"
-      ? (Pessoa.PaisQueMora = true)
-      : (Pessoa.PaisQueMora = false);
-  return Pais;
+  if(Pessoa.Pais  !== "Pernambuco") {
+    Pessoa.MoraPe = 'sim'
+  } else {
+    Pessoa.MoraPe = 'Não'
+  }
 };
 
 const verificaAltura = () => {
-  const altura =
-    Pessoa.altura < 1.6 
-    ? (Pessoa.Naolta = true) 
-    : (Pessoa.EAlta = false);
-  return altura;
+  if(Pessoa.altura < 1.60) {
+    Pessoa.Alta = 'não'
+  } else {
+    Pessoa.Alta = 'Sim'
+  }
 };
 
 console.log(Pessoa);
